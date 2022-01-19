@@ -17,7 +17,9 @@
 	/*margins and paddings*/
 	--gap-global: 8px;
 	--gap-double: 18px;
+	--size-font-large: 24px;
 	--size-font-medium: 16px;
+	--size-font-small: 12px;
 	--size-icon-medium: 20px;
 	--size-icon-small: 16px;
 
@@ -44,7 +46,7 @@
 	color: var(--color-basalt);
 }
 h1 {
-	font-size: calc(var(--gap-global)*3);
+	font-size: var(--size-font-large);
 	font-weight: 800;
 }
 
@@ -74,6 +76,28 @@ div.card-main-info img {
 }
 div.card-main-info span {
 	margin-left: var(--gap-global);
+	font-size: var(--size-font-medium);
+	font-weight: 700;
+	line-height: 0;
+}
+
+figure.card-column {
+	margin-bottom: var(--gap-global);
+}
+
+div.card-column-info {
+	position: relative;
+	padding: calc(0.5 * var(--gap-global)) var(--gap-global);
+}
+
+div.card-column-info img {
+	display: inline-block;
+	width: var(--size-icon-small);
+	vertical-align: middle;
+}
+div.card-column-info span {
+	margin-left: var(--gap-global);
+	font-size: var(--size-font-small);
 	font-weight: 700;
 	line-height: 0;
 }
@@ -106,6 +130,14 @@ button.button-large {
 	padding: 0 20px;
 	border-radius: 20px;
 
+}
+#columns {
+	column-width: calc(50vw - 2*var(--gap-global));
+	column-gap: 8px;
+  width: 100%;
+	max-width: 1100px;
+	margin: var(--gap-global) auto;
+	padding: 0 var(--gap-global);
 }
 
 
