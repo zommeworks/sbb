@@ -5,18 +5,26 @@
 :root {
 	/* color varibles */
 	--color-white: rgba(255, 255, 255, 1);
-	--color-paper: rgba(240, 240, 240, 1);
+	--color-paper: rgba(245, 245, 245, 1);
   --color-purple: rgba(100, 50, 255, 1);
   --color-basalt: rgba(0, 0, 0, 0.85);
   --color-black: rgba(0, 0, 0, 1);
+	--color-yellow: #FEE500;
+	--color-prime: rgba(0, 0, 0, 1);
   --color-grad-shadow-up: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.08));
+	--color-grad-prime-up: linear-gradient(to top, var(--color-prime) 80%, transparent);
 
 	/*fundamentals*/
 	--PI: 3.14159265358979;
 
 	/*margins and paddings*/
-	--gap-global: 8px;
-	--gap-double: 18px;
+	--gap-half: 4px;
+	--gap-normal: 8px;
+	--gap-double: 16px;
+	--round-small: 12px;
+	--round-normal: 16px;
+	--round-large: 20px;
+	--round-max: 32px;
 	--size-font-large: 24px;
 	--size-font-medium: 16px;
 	--size-font-small: 12px;
@@ -45,6 +53,9 @@
 	font-family: 'Gothic A1', sans-serif;
 	color: var(--color-basalt);
 }
+body {
+	background-color: var(--color-paper);
+}
 h1 {
 	font-size: var(--size-font-large);
 	font-weight: 800;
@@ -56,17 +67,22 @@ img {
 }
 
 div.container-section {
-	margin-bottom: var(--gap-global);
+	position: relative;
+	margin: 0 auto;
+	margin-bottom: var(--gap-normal);
+	max-width: calc(1200px + 4 * var(--gap-normal));
 }
 
 div.card-main-footer {
 	display: block;
-	padding: calc(3 * var(--gap-global)) var(--gap-global);
+	padding: calc(3 * var(--gap-normal)) var(--gap-normal);
+	border-radius: var(--round-max) var(--round-max) 0 0;
+	background-color: var(--color-paper);
 }
 
 div.card-main-info {
 	position: absolute;
-	left: var(--gap-global);
+	left: var(--gap-normal);
 }
 
 div.card-main-info img {
@@ -75,28 +91,37 @@ div.card-main-info img {
 	vertical-align: middle;
 }
 div.card-main-info span {
-	margin-left: var(--gap-global);
+	margin-left: var(--gap-normal);
 	font-size: var(--size-font-medium);
 	font-weight: 700;
 	line-height: 0;
 }
-
-figure.card-column {
-	margin-bottom: var(--gap-global);
-}
-
-div.card-column-info {
+.grid {
 	position: relative;
-	padding: calc(0.5 * var(--gap-global)) var(--gap-global);
+	box-sizing: border-box;
+	padding: var(--gap-normal) var(--gap-half);
+}
+.grid-item {
+	margin-top: 0;
+	margin-bottom: var(--gap-normal);
+	margin-left: var(--gap-half);
+	margin-right: var(--gap-half);
+	width: calc((100% - 3 * var(--gap-normal))/2);
+	max-width: 400px;
 }
 
-div.card-column-info img {
+div.card-grid-info {
+	position: relative;
+	padding: var(--gap-half) var(--gap-normal);
+}
+
+div.card-grid-info img {
 	display: inline-block;
 	width: var(--size-icon-small);
 	vertical-align: middle;
 }
-div.card-column-info span {
-	margin-left: var(--gap-global);
+div.card-grid-info span {
+	margin-left: var(--gap-normal);
 	font-size: var(--size-font-small);
 	font-weight: 700;
 	line-height: 0;
@@ -110,8 +135,8 @@ div.placeholder {
 }
 
 div.header {
-	padding: calc(3*var(--gap-global));
-	padding-bottom: var(--gap-global);
+	padding: calc(3 * var(--gap-normal));
+	padding-bottom: var(--gap-normal);
 }
 
 button {
@@ -120,32 +145,22 @@ button {
 	vertical-align: middle;
 	width: auto;
 	border-width: 0;
-	background-color: var(--color-purple);
-	color: var(--color-white);
+	background-color: var(--color-yellow);
+	color: var(--color-basalt);
 }
 
 button.button-large {
 	font-size: var(--size-font-medium);
 	height: 40px;
 	padding: 0 20px;
-	border-radius: 20px;
+	border-radius: var(--round-small);
 
 }
-#columns {
-	column-width: calc(50vw - 2*var(--gap-global));
-	column-gap: 8px;
-  width: 100%;
-	max-width: 1100px;
-	margin: var(--gap-global) auto;
-	padding: 0 var(--gap-global);
-}
+
 
 
 /* alignment */
-.align-h-left, .align-g-center, .align-h-right,
-.align-v-top, .align-v-middle, .align-v-bottom {
-	/* position: absolute;*/
-}
+
 .align-h-left {
   left: 0;
 }
@@ -165,20 +180,29 @@ button.button-large {
 
 /* generic style calsses */
 
-.mask-round-16 {
-  border-radius: 16px;
+.mask-round-normal {
+  border-radius: var(--round-normal);
 }
 
-.shadow-drop-15 {
+.shadow-drop-normal {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 }
 
-.shadow-up::after {
+.shadow-drop-narrow {
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.shadow-up-normal {
+  box-shadow: 0px -2px 3px rgba(0, 0, 0, 0.15);
+}
+
+.colorblur-up::before {
   pointer-events: none;
 	position: absolute;
-	bottom: 0;
+	top: calc( -1 * var(--gap-normal));
+	left: 0;
 	content: '';
-	background: var(--color-grad-shadow-up);
+	background: var(--color-grad-prime-up);
 	width: 100%;
-	height: 8px;
+	height: calc(var(--gap-normal) + var(--round-max));
 }
