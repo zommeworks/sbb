@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(function(){
   /* masonry style setup */
   var $grid = $('.grid').masonry({
     itemSelector: '.grid-item',
@@ -6,7 +6,7 @@ $(document).ready(function(){
   });
 
   /*  */
-  $(data_main).ready(function(){
+  $.when(data_main).then(function(){
     /* put a main card image */
     $('#template_main').html(function(index, html){
       var html_main = html.replace("{{card_source}}", data_main.source);
@@ -27,19 +27,17 @@ $(document).ready(function(){
       itemSelector: '.grid-item',
       horizontalOrder: true,
     });
-    $(data_f_cat).ready(function(){
+    $.when(data_f_cat).then(function(){
       $.each(data_f_cat, function(gridindex, griditem){
         if(griditem.name != name) {
           $('#template_grid_card').html(function(index, html){
             var html_card = html.replace("{{card_source}}", griditem.source);
             $grid.append(html_card);
-
-            $('.img-card').ready(function(){
+            $('.img-card').on('load', function(){
               $grid.masonry('reloadItems')
                    .masonry('layout').
                    masonry('appended', html_card);
             });
-
             console.log($(html_card));
           });
         }

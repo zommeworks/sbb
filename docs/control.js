@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(function(){
 	$(data_main).ready(function(){
 		const share_data = {
 			title: data_main.quote,

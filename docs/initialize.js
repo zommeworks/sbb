@@ -5,13 +5,8 @@ const category_kr_none = "비슷한";
 var page_title = "새벽별";
 var category_kr = category_kr_none;
 
-var data_all;
-var data_main;
-var data_f_cat;
-var data_f_style;
-
 /* read csv data */
-$.get("./src/contentdata.csv", function(CSVdata) {
+var $contentdata = $.get("./src/contentdata.csv", function(CSVdata) {
   /* extract data */
   data_all = $.csv.toObjects(CSVdata);
   data_main = data_all.find(x => x.name === name);
@@ -41,4 +36,12 @@ $.get("./src/contentdata.csv", function(CSVdata) {
         break;
     }
   }
+
+  /* return data */
+  return {data_all, data_main, data_f_cat, data_f_style};
 });
+
+var data_all = $contentdata.data_all;
+var data_main = $contentdata.data_main;
+var data_f_cat = $contentdata.data_f_cat;
+var data_f_style = $contentdata.data_f_style;
