@@ -23,6 +23,7 @@
 
   <script src="initialize.js"></script>
   <script src="content.js"></script>
+  <script src="control.js"></script>
 
   <link rel="icon" href="./src/icon/favicon.png">
   <link rel='stylesheet' href='style.css' type='text/css' media='screen' />
@@ -41,15 +42,17 @@
   <!-- grid card template -->
   <script id="template_grid_card" type="text/template">
     <figure class="grid-item">
-      <div class="placeholder mask-round-normal shadow-drop-normal">
-        <img class="img-card" src="{{card_source}}">
-      </div>
-      <!--figcaption>
-        <div class="card-grid-info">
-          <img src="./src/icon/repost.svg" alt="">
-          <span>{{share_count}}</span>
+      <a href="{{link_target}}">
+        <div class="placeholder mask-round-normal shadow-drop-normal">
+          <img class="img-card" src="{{card_source}}">
         </div>
-      </figcaption-->
+        <!--figcaption>
+          <div class="card-grid-info">
+            <img src="./src/icon/repost.svg" alt="">
+            <span>{{share_count}}</span>
+          </div>
+        </figcaption-->
+      </a>
     </figure>
   </script>
 
@@ -73,5 +76,4 @@
 
 
 </body>
-<script src="control.js"></script>
 </html>

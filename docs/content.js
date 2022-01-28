@@ -31,14 +31,15 @@ $(function(){
       $.each(data_f_cat, function(gridindex, griditem){
         if(griditem.name != name) {
           $('#template_grid_card').html(function(index, html){
-            var html_card = html.replace("{{card_source}}", griditem.source);
+            var url_target = /.*\?card=/.exec(url) + griditem.name;
+            var html_card = html.replace("{{link_target}}", url_target)
+                                .replace("{{card_source}}", griditem.source);
             $grid.append(html_card);
             $('.img-card').on('load', function(){
               $grid.masonry('reloadItems')
                    .masonry('layout').
                    masonry('appended', html_card);
             });
-            console.log($(html_card));
           });
         }
       });
