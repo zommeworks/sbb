@@ -25,9 +25,10 @@
 	--round-normal: 16px;
 	--round-large: 20px;
 	--round-max: 32px;
-	--size-font-large: 24px;
-	--size-font-medium: 16px;
 	--size-font-small: 12px;
+	--size-font-medium: 16px;
+	--size-font-large: 20px;
+	--size-font-max: 24px;
 	--size-icon-medium: 20px;
 	--size-icon-small: 16px;
 
@@ -57,7 +58,7 @@ body {
 	background-color: var(--color-paper);
 }
 h1 {
-	font-size: var(--size-font-large);
+	font-size: var(--size-font-max);
 	font-weight: 800;
 }
 
@@ -157,9 +158,9 @@ button {
 }
 
 button.button-large {
-	font-size: var(--size-font-medium);
-	height: 40px;
-	padding: 0 20px;
+	font-size: var(--size-font-large);
+	height: 56px;
+	padding: 0 32px;
 	border-radius: var(--round-small);
 
 }

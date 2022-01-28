@@ -1,9 +1,24 @@
 name,category,style,source,overlay,quote,sharecount
-newyear-01,newyear,modest,./src/img/newyear-01.png,none,임인년 새해 복 많이 받으세요!,0
-newyear-02,newyear,modest,./src/img/newyear-02.png,none,호랑이 기운과 함께 힘찬 새해를!,0
-newyear-03,newyear,halme,./src/img/newyear-03.png,none,임인년 새해 복 많이 받으세요!,0
-newyear-04,newyear,aje,./src/img/newyear-04.png,none,2022년 새해 복 많이 받으세요!,0
-newyear-05,newyear,aje,./src/img/newyear-05.png,none,2022년 새해 복 많이 받으세요!,0
-newyear-06,newyear,aje,./src/img/newyear-06.png,none,임인년 새해 복 많이 받으세요!,0
-newyear-07,newyear,halme,./src/img/newyear-07.png,none,2022년 새해 복 많이 받으세요!,0
-newyear-08,newyear,modest,./src/img/newyear-08.png,none,임인년 새해 복 많이 받으세요!,0
+greeting-01,greeting,soft,./src/img/greeting-01.jpg,none,좋은 아침이에요~!,0
+greeting-02,greeting,ajime,./src/img/greeting-02.jpg,none,행복한 하루❤️,0
+greeting-03,greeting,ajime,./src/img/greeting-03.jpg,none,느긋하고 여유로운 오후 보내시길..,0
+greeting-04,greeting,ajime,./src/img/greeting-04.jpg,none,즐거운 하루!,0
+newyear-01,newyear,modest,./src/img/newyear-01.jpg,none,임인년 새해 복 많이 받으세요!,0
+newyear-02,newyear,modest,./src/img/newyear-02.jpg,none,호랑이 기운과 함께 힘찬 새해를!,0
+newyear-03,newyear,halme,./src/img/newyear-03.jpg,none,임인년 새해 복 많이 받으세요!,0
+newyear-04,newyear,aje,./src/img/newyear-04.jpg,none,"복 씨게 갑니다, 잘 받으세요!",0
+newyear-05,newyear,aje,./src/img/newyear-05.jpg,none,새해가 밝아옵니다. 모든 소망 이루소서,0
+newyear-06,newyear,aje,./src/img/newyear-06.jpg,none,복받으시고 부자되세요~!,0
+newyear-07,newyear,halme,./src/img/newyear-07.jpg,none,새해 복 많이 받으세요~,0
+newyear-08,newyear,modest,./src/img/newyear-08.jpg,none,"송구영신, 새해 새로운 마음으로...",0
+newyear-09,newyear,soft,./src/img/newyear-09.jpg,none,새해 복 많이~ 받으세요!,0
+newyear-10,newyear,soft,./src/img/newyear-10.jpg,none,근하신년 2022 행복한 한해 되세요~!,0
+newyear-11,newyear,soft,./src/img/newyear-11.jpg,none,호랑이 기운 넘치는 새해 되세요!,0
+newyear-12,newyear,soft,./src/img/newyear-12.jpg,none,호랑이 기운과 함깨 힘찬 새해를...,0
+newyear-13,newyear,soft,./src/img/newyear-13.jpg,none,건강이 최고입니다. 새해에도 쭉 건강하세요~,0
+positive-01,positive,ajime,./src/img/positive-01.jpg,none,"그대, 꽃길만 걸어요~",0
+positive-02,positive,ajime,./src/img/positive-02.jpg,none,"웃음, 여유, 사랑!",0
+positive-03,positive,ajime,./src/img/positive-03.jpg,none,웃으면 복이와요 ^ㅁ^,0
+positive-04,positive,ajime,./src/img/positive-04.jpg,none,행복의 왕도는 마음챙김입니다.,0
+positive-05,positive,ajime,./src/img/positive-05.jpg,none,기지개 쭉쭉!,0
+thankyou-01,thankyou,soft,./src/img/thankyou-01.jpg,none,언제나 고맙습니다.,0
