@@ -76,7 +76,9 @@ div.container-section {
 div.card-main-footer {
 	display: block;
 	padding: calc(3 * var(--gap-normal)) var(--gap-normal);
+	/*
 	border-radius: var(--round-max) var(--round-max) 0 0;
+	*/
 	background-color: var(--color-paper);
 }
 
@@ -100,6 +102,11 @@ div.card-main-info span {
 	position: relative;
 	box-sizing: border-box;
 	padding: var(--gap-normal) var(--gap-half);
+}
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
 }
 .grid-item {
 	margin-top: 0;
